@@ -1,0 +1,75 @@
+# Project TODO
+
+- [x] Basic homepage layout
+- [x] Navigation menu / Sidebar
+- [x] Dashboard Executivo (Sócios)
+- [x] Dashboard por Área (Líderes)
+- [x] Dashboard Terapeuta (Individual)
+- [x] Painel Admin (Gestão de Metas)
+- [x] Cadastro de Colaboradores
+- [x] Cadastro de Pacientes
+- [x] NPS Público (formulário)
+- [x] Registro de Sessões com CRUD
+- [x] Relatórios PDF com stepper visual
+- [x] QR Code NPS com presets e modelos salvos
+- [x] WhatsApp NPS - envio automático
+- [x] Notificações Push para sócios
+- [x] Filtros avançados no calendário de sessões
+- [x] Calendário interativo de sessões
+- [x] Testes automatizados para RelatoriosPDF (23 testes)
+- [x] Upgrade para full-stack (web-db-user)
+- [x] Criar tabelas no banco para modelos QR e histórico WhatsApp
+- [x] Conectar Supabase/DB para persistência de modelos QR
+- [x] Conectar Supabase/DB para persistência de histórico WhatsApp
+- [x] Dashboard de métricas do WhatsApp com gráficos
+- [x] Exportação iCal do calendário de sessões
+- [x] Integrar WhatsApp Business API com credenciais (pronto para receber credenciais)
+- [x] Criar endpoint /api/calendar/feed para feed iCal em tempo real
+- [x] Melhorar tela de configuração WhatsApp com verificação real e guia passo a passo
+- [x] Webhook WhatsApp para receber status de mensagens
+- [x] Painel de Onboarding para terapeutas
+- [x] Agenda Visual de agendamento (calendário interativo)
+- [x] Cadastro de Pacientes conectado ao banco real (tRPC procedures criadas)
+- [x] Relatório de Produtividade por terapeuta
+- [x] Sistema de Metas Editáveis no painel admin
+- [x] Portal do Paciente/Família (área pública)
+- [x] Módulo Financeiro - Dashboard (receita, despesas, lucro, fluxo de caixa)
+- [x] Módulo Financeiro - Contas a Receber (pagamentos por paciente, inadimplência)
+- [x] Módulo Financeiro - Comissionamento por terapeuta
+- [x] Gestão de Salas - Mapa visual com ocupação em tempo real
+- [x] Prontuário Digital - Templates por área vinculado ao Portal Família
+- [x] Simulador de Ganhos para terapeutas (projeção por nível e sessões)
+- [x] Refatorar Simulador de Ganhos: valor da sessão editável, repasse por nível com simulação de promoção, projetado vs realizado
+- [x] Refatorar Simulador com 7 níveis reais (Semente a Árvore) e percentuais corretos
+- [x] Adicionar histórico de ganhos mensal ao Simulador
+- [x] Reorganizar sidebar em grupos colapsáveis (Financeiro, Administrativo, Clínico, etc.)
+- [x] Sprint 1: Gestão de Guias/Convênios - Tabela no banco
+- [x] Sprint 1: Gestão de Guias/Convênios - CRUD (criar, editar, excluir guias)
+- [x] Sprint 1: Gestão de Guias/Convênios - Dashboard de vencimentos (30/15/7 dias)
+- [x] Sprint 1: Gestão de Guias/Convênios - Alertas automáticos de vencimento
+- [x] Sprint 1: Gestão de Guias/Convênios - Bloqueio pré-atendimento se guia inválida
+- [x] Sprint 1: Gestão de Guias/Convênios - Fluxo de renovação com checklist
+- [x] Integrar alertas de guia com WhatsApp (envio automático 30/15/7 dias para famílias)
+- [x] Dashboard de Glosas (cruzamento guias vencidas × sessões sem guia válida)
+- [x] Dropdown inteligente de pacientes no formulário de guias (preenchimento automático + opção adicionar)
+- [x] Consolidar mapeamento completo do backlog (vídeos Letícia + plataformas citadas)
+- [x] Sprint 3: Protocolos de Avaliação (VB-MAPP, Denver, ABLS, AFLS) - Tabelas no banco
+- [x] Sprint 3: Protocolos de Avaliação - Aplicação digital com scoring automático
+- [x] Sprint 3: Protocolos de Avaliação - Gráfico de evolução por domínio
+- [x] Sprint 3: Plano Terapêutico Individual (PTI) - Tabela no banco
+- [x] Sprint 3: PTI - Objetivos por área, metas SMART, revisão trimestral
+- [x] Sprint 3: PTI - Vinculado ao prontuário e visível no Portal Família
+- [x] Sprint 3: Relatório de Evolução Automatizado - Geração automática para convênios
+- [x] Sprint 3: Supervisão Clínica - Registro de supervisões e feedback
+- [x] Sprint 3: Supervisão Clínica - Plano de ação e obrigatório para promoção
+- [x] Sprint 3: Banco de Atividades/Materiais - Biblioteca compartilhada por área
+- [x] Sprint 3: Banco de Atividades/Materiais - Contribuição e avaliação por terapeutas
+- [x] Sprint 2: Avaliação de Desempenho 360° - Tabelas no banco
+- [x] Sprint 2: Avaliação 360° - Formulário de avaliação por pares, líderes e famílias
+- [x] Sprint 2: Avaliação 360° - Ciclo trimestral com critérios (pontualidade, prontuário, NPS, evolução, supervisão)
+- [x] Sprint 2: Avaliação 360° - Dashboard de resultados com radar chart
+- [x] Sprint 2: Plano de Carreira Visual - Visualização Semente→Árvore com critérios mensuráveis
+- [x] Sprint 2: Plano de Carreira Visual - Requisitos por nível (tempo, NPS, sessões, capacitações)
+- [x] Sprint 2: Banco de Horas / Controle de Ponto - Registro entrada/saída e banco de horas
+- [x] Sprint 2: Gestão de Férias e Licenças - Calendário com impacto na agenda
+- [x] Sprint 2: Treinamentos e Capacitações - Registro de cursos e certificações (requisito para promoção)
