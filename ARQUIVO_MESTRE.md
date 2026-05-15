@@ -425,7 +425,9 @@ O Google Drive da Aldeia é a **fonte primária e mais atualizada** de todos os 
 | `02-jornada-terapeuta-detalhada.md` | Jornada ideal do terapeuta — rotina hora a hora, cada touchpoint com a plataforma, frequência de uso por aba, 13 pontos de melhoria UX/UI priorizados. | [Drive](https://drive.google.com/open?id=1idiikFzYR8Ew2vmOXAVofKtgRp1tZxav) |
 | `03-analise-saas-multitenant.md` | Análise de viabilidade SaaS multi-tenant — custos de infra, escopo técnico, modelo de preço, roadmap de 8-9 semanas. | [Drive](https://drive.google.com/open?id=16hioVsIvlbTFG6rlVurboDMWh32wu4rX) |
 | `04-diagnostico-ux-jornada.md` | Diagnóstico UX vs Jornada — mapeamento de 10 fluxos sequenciais, 8 quebrados (80%), quick wins P0/P1/P2 priorizados. | [Drive](https://drive.google.com/open?id=19HRMV0YaiGaZZfGtSc6zC7weDGJOYxNh) |
+| `05-jornada-supervisor-detalhada.md` | Jornada ideal do supervisor de área — rotina semanal, supervisão individual/grupal, revisão de PTIs, reunião de equipe, gestão de crises. 8 pontos de melhoria UX/UI. Itens físicos: R$ 15.510. | [Drive](https://drive.google.com/open?id=1P-gWgTahN2BlGLm0l8JdhrarF9ta0hbU) |
+| `06-jornada-administrativo-detalhada.md` | Jornada ideal do administrativo/recepção (Nyccole) — rotina diária completa, fluxo de novo paciente, gestão de guias, faturamento, agenda, comunicação. 10 pontos de melhoria UX/UI. Itens físicos: R$ 29.030. | [Drive](https://drive.google.com/open?id=1DnmhA6kDzjC1D-XUYIj1-hFRSBCnvYn-) |
 | `diagrama-paciente-detalhado.png` | Diagrama visual da jornada do paciente (Mermaid) | Drive: Aldeia/Jornadas/ |
 | `diagrama-terapeuta-detalhado.png` | Diagrama visual da jornada do terapeuta (Mermaid) | Drive: Aldeia/Jornadas/ |
 
-**Jornadas pendentes:** Supervisor de Área, Administrativo/Recepção.
+**Status:** Todas as 4 jornadas concluídas (Paciente, Terapeuta, Supervisor, Administrativo). Total de 31 pontos de melhoria UX/UI identificados.
