@@ -1,10 +1,12 @@
 # ARQUIVO MESTRE — ALDEIA: Centro de Neurodesenvolvimento e Conexão
 
-**Última Atualização:** 12/05/2026
+**Última Atualização:** 15/05/2026
 
 > **INSTRUÇÃO PARA O MANUS:** Ao iniciar qualquer tarefa neste projeto, leia este arquivo primeiro. Ele contém o contexto completo da Aldeia. Se precisar de detalhes específicos de uma área, abra o arquivo correspondente no índice (Parte 4).
 
 > **ACESSO AOS ARQUIVOS COMPLETOS:** O ZIP com todos os 459 arquivos organizados (documentos, imagens, PDFs, versões anteriores) está disponível em: https://manus.im/share/file/7e1b3dde-fdc8-4f2c-a406-fba47acd3d17 — Solicite ao usuário que envie o ZIP caso precise acessar os arquivos detalhados.
+
+> **CAMADA 5 — GOOGLE DRIVE (Fonte Primária):** Todos os arquivos jurídicos, financeiros e operacionais estão organizados no Google Drive em: **Aldeia > 02_JURIDICO** (e demais subpastas). O Google Drive é a fonte primária e mais atualizada. Use o CLI `gws` para acessar. A pasta raiz da Aldeia no Drive tem ID `1mVizl4T...` e a pasta Jurídico tem ID `1xH0J6AK...`.
 
 ---
 
@@ -47,6 +49,8 @@
 - ✅ Estratégia de Instagram (V2) e Calendário Editorial de 30 dias finalizados.
 - ✅ Manuais de RH e Operações redigidos.
 - ✅ Plano de carreira 7 níveis definido.
+- ✅ Reunião final jurídica realizada (15/05/2026) — estratégias, proposta e cronograma consolidados.
+- ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
 **Checkpoint atual:** v040e9b89 | **Tecnologia:** React 19 + tRPC + MySQL + Tailwind 4
@@ -110,6 +114,16 @@ Neuropsicólogo (7,34m²), Psico.1 (6,12m²), Psico.2 (5,83m²), Fono.1 (5,88m²
 3. Pressão Regulatória: NIPs na ANS → Notificação Extrajudicial → Denúncia ANS
 
 **VOAM:** Credenciamento fechado, mas Aldeia está no radar. Plano: dossiê profissional + criação de demanda (NIPs) + reembolso integral + notificação extrajudicial.
+
+**Decisões da Reunião Jurídica (15/05/2026) — Escritório Höschele e Silva:**
+- **Honorários de Reembolso:** Reembolso integral → escritório cobra R$ 2.200–3.000 fixo por ação, saldo vai para a Aldeia. Reembolso parcial (tabela do plano) → divisão 50/50. Dano moral → 30% escritório, 70% pais (incentivo para os pais entrarem no processo).
+- **Fórum Preferido: Vara Cível** (não Juizado Especial) — permite liminar em 3–5 dias. Estratégia: múltiplos processos distribuídos por dependência (um por mês de atendimento), com pedido em dois níveis (Split the Baby: integral como principal, tabela do plano como subsidiário).
+- **Caso-piloto no Juizado:** Testar com um processo difícil para sentir a receptividade do juiz local.
+- **Cartilha para os Pais:** Escritório elaborará cartilha de reembolso administrativo por plano. Após negativa, pai envia notificação extrajudicial (sem identificação do escritório) dando 48h antes de judicializar.
+- **Hipossuficiência:** Pais que comprovarem incapacidade financeira entram na Vara Cível sem custas. Liminar em 3 dias se documentação estiver em ordem.
+- **Proposta em Pacote Único:** Confirmado verbalmente — escritório fechará todos os contratos em pacote único, eliminando a divisão confusa entre honorários e custos operacionais.
+- **Parceria Estratégica (em negociação):** Rica propôs trocar honorários de êxito do credenciamento pelos ganhos do escritório com reembolsos dos pais. Advogado sinalizou interesse, mas precisa consultar sócio Jefferson. Contrapartida do escritório: participação minoritária na Aldeia ou retainer mensal fixo pós-credenciamento. **Pauta da próxima reunião.**
+- **Projeção:** 90 pacientes/ano 1 → 45 com plano → R$ 180.000/mês em pedidos de reembolso → R$ 300.000/mês em volume processual. Breakeven com 28 pacientes particulares.
 
 ### 3.3. FINANCEIRO
 **PRONAMPE 2026:** Selic + até 6% a.a., até 72 meses, carência de 12 meses, aval pessoal. Limite: 50% do Capital Social = R$ 250 mil (teto). Processo: e-CAC → autorizar compartilhamento → banco PJ → simulação → assinatura digital.
@@ -349,3 +363,26 @@ Logos, uniformes, banners, dashboards e materiais visuais. Destaques:
 
 *Total: 119 arquivos .md organizados + 55 imagens + 17 PDFs = 191 arquivos.*
 *Localização: `/home/ubuntu/aldeia-organizado/`*
+
+---
+
+## PARTE 5: GOOGLE DRIVE — CAMADA DE DOCUMENTOS PRIMÁRIOS
+
+O Google Drive da Aldeia é a **fonte primária e mais atualizada** de todos os documentos. O GitHub contém os arquivos .md processados e indexados; o Drive contém os originais, PDFs, áudios e versões de trabalho.
+
+**Acesso via CLI:** `gws drive files list` (autenticado como conta Google da Aldeia)
+
+| Pasta no Drive | Conteúdo | ID da Pasta |
+|:---|:---|:---|
+| **Aldeia** (raiz) | Pasta principal com todas as subpastas | `1mVizl4T...` |
+| **02_JURIDICO** | 17 arquivos jurídicos completos (JUR_01 a JUR_17) | `1xH0J6AK...` |
+
+**Arquivos-chave no Drive (Jurídico):**
+- `JUR_08_analise_proposta_juridica.md` — Proposta completa do escritório Höschele e Silva com análise crítica
+- `JUR_09_cronograma_juridico.md` — Cronograma de ações com divisão Rica / Letícia / Escritório
+- `JUR_15_responsabilidades_escritorio.md` — Escopo completo do escritório (10 blocos, R$ 35.500–53.500/ano)
+- `propostaaldeiaHöscheleeSilvaAdvogadosAssociados.pdf` — Proposta original em PDF
+
+**Documentos gerados na sessão de 15/05/2026:**
+- `REUNIAO_FINAL_JURIDICA_ALDEIA.md` — Consolidado completo para a reunião final (estratégias + proposta + cronograma)
+- `TRANSCRICAO_E_ATUALIZACOES_JURIDICA.md` — Transcrição da reunião + 8 atualizações necessárias identificadas
