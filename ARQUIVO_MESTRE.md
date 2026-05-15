@@ -1,6 +1,6 @@
 # ARQUIVO MESTRE — ALDEIA: Centro de Neurodesenvolvimento e Conexão
 
-**Última Atualização:** 15/05/2026
+**Última Atualização:** 14/05/2026 (atualizado em sessão de 14/05/2026)
 
 > **INSTRUÇÃO PARA O MANUS:** Ao iniciar qualquer tarefa neste projeto, leia este arquivo primeiro. Ele contém o contexto completo da Aldeia. Se precisar de detalhes específicos de uma área, abra o arquivo correspondente no índice (Parte 4).
 
@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** v040e9b89 | **Tecnologia:** React 19 + tRPC + MySQL + Tailwind 4
+**Checkpoint atual:** v1ced3912 | **Tecnologia:** React 19 + tRPC + MySQL + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -74,7 +74,7 @@
 - ✅ Painel Admin (configurações, usuários)
 - ✅ Protocolos de Avaliação (VB-MAPP, Denver, ABLS, AFLS — scoring automático)
 - ✅ Plano Terapêutico Individual - PTI (objetivos SMART, revisão trimestral)
-- ✅ Relatório de Evolução Automatizado (para convênios)
+- ✅ Relatório de Evolução Automatizado (para convênios) + Exportação CSV com filtro por convênio/período
 - ✅ Supervisão Clínica (registro, feedback, plano de ação)
 - ✅ Banco de Atividades/Materiais (biblioteca compartilhada)
 - ✅ Avaliação de Desempenho 360° (pares, líderes, famílias)
@@ -83,12 +83,21 @@
 - ✅ Gestão de Férias e Licenças
 - ✅ Treinamentos e Capacitações
 - ✅ Integração WhatsApp (alertas de guia automáticos)
+- ✅ **Controle de Atendimentos para Cobrança** (Sprint 6 — Data, Hora, Paciente, Área, Tipo, Convênio, Duração, Valor, Repasse, Status, Prontuário 24h + filtros + exportação CSV/PDF)
+- ✅ **Login por Código de Acesso** (senha compartilhada, sem necessidade de conta Manus — código padrão configurável via Settings > Secrets)
+
+**Decisões de arquitetura (14/05/2026):**
+- **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
+- **Migração planejada:** Após validação da Nyccole, migrar banco TiDB → Supabase PostgreSQL (RLS, backup controlado, portabilidade, compliance LGPD). Estimativa: 3-4 sessões.
+- **UX sequencial:** Diagnóstico identificou 8 de 10 fluxos quebrados (80%). Plataforma trata telas como módulos independentes, sem CTAs de "próximo passo". Quick wins priorizados: popup de objetivos na agenda, pré-preenchimento no registro clínico, CTA "próximo paciente".
+- **Multi-tenant (futuro):** Análise de viabilidade SaaS concluída. Custo infra R$ 280/mês para até 20 clínicas. Requer: clinicaId em 28 tabelas, auth próprio, Stripe, landing page, painel super admin. Estimativa: 8-9 semanas.
 
 **Próximas sprints pendentes:**
 - Sprint 4: Portal Família (acesso externo para pais/responsáveis)
 - Sprint 5: Agenda Inteligente (otimização de horários, conflitos)
-- Sprint 6: Financeiro Avançado (faturamento TISS, conciliação)
 - Sprint 7: Inteligência Artificial (predição de evasão, sugestões)
+- Quick Wins UX: CTAs de próximo passo em fluxos críticos (onboarding, sessão, supervisão, faturamento)
+- Migração Supabase: Banco + Auth + Deploy independente
 
 ---
 
@@ -403,3 +412,20 @@ O Google Drive da Aldeia é a **fonte primária e mais atualizada** de todos os 
 **Documentos gerados na sessão de 15/05/2026:**
 - `REUNIAO_FINAL_JURIDICA_ALDEIA.md` — Consolidado completo para a reunião final (estratégias + proposta + cronograma)
 - `TRANSCRICAO_E_ATUALIZACOES_JURIDICA.md` — Transcrição da reunião + 8 atualizações necessárias identificadas
+
+---
+
+## PARTE 6: JORNADAS, ANÁLISES E DIAGNÓSTICOS (Google Drive)
+
+**Pasta:** `Aldeia/Jornadas/` e `Aldeia/Estrategia/` no Google Drive
+
+| Documento | Conteúdo | Localização |
+|:---|:---|:---|
+| `01-jornada-paciente-detalhada.md` | Jornada ideal do paciente/família — 10 fases, nível operacional (estacionamento, recepção, senhas, salas, feedback). Inclui tabela de itens físicos + digitais necessários. | [Drive](https://drive.google.com/open?id=1rh-pXSE1QV-5ra_OVXPv7FZvwB5tzTsw) |
+| `02-jornada-terapeuta-detalhada.md` | Jornada ideal do terapeuta — rotina hora a hora, cada touchpoint com a plataforma, frequência de uso por aba, 13 pontos de melhoria UX/UI priorizados. | [Drive](https://drive.google.com/open?id=1idiikFzYR8Ew2vmOXAVofKtgRp1tZxav) |
+| `03-analise-saas-multitenant.md` | Análise de viabilidade SaaS multi-tenant — custos de infra, escopo técnico, modelo de preço, roadmap de 8-9 semanas. | [Drive](https://drive.google.com/open?id=16hioVsIvlbTFG6rlVurboDMWh32wu4rX) |
+| `04-diagnostico-ux-jornada.md` | Diagnóstico UX vs Jornada — mapeamento de 10 fluxos sequenciais, 8 quebrados (80%), quick wins P0/P1/P2 priorizados. | [Drive](https://drive.google.com/open?id=19HRMV0YaiGaZZfGtSc6zC7weDGJOYxNh) |
+| `diagrama-paciente-detalhado.png` | Diagrama visual da jornada do paciente (Mermaid) | Drive: Aldeia/Jornadas/ |
+| `diagrama-terapeuta-detalhado.png` | Diagrama visual da jornada do terapeuta (Mermaid) | Drive: Aldeia/Jornadas/ |
+
+**Jornadas pendentes:** Supervisor de Área, Administrativo/Recepção.
