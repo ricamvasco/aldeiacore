@@ -277,6 +277,7 @@ Semente (Estagiário): Bolsa fixa | Broto (AT): 24-27% | Caule (Júnior): 28-31%
 | `MKT_23_marketing_strategy_skill.md` | Guia de estratégia de marketing (skill) |
 | `MKT_24_relatorio_reuniao_14mai.md` | Relatório da reunião de marketing 14/05/2026 |
 | `MKT_25_framework_ladeira_7interacoes.md` | Framework Ladeira: 7 tipos de interação |
+| `MKT_26_playbook_jogadas_crescimento.md` | Playbook de Jogadas (Growth & Retention) |
 
 ### RH (16 arquivos)
 | Arquivo | Conteúdo |
