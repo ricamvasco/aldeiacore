@@ -6,7 +6,7 @@
 
 > **ACESSO AOS ARQUIVOS COMPLETOS:** O ZIP com todos os 459 arquivos organizados (documentos, imagens, PDFs, versões anteriores) está disponível em: https://manus.im/share/file/7e1b3dde-fdc8-4f2c-a406-fba47acd3d17 — Solicite ao usuário que envie o ZIP caso precise acessar os arquivos detalhados.
 
-> **CAMADA 5 — GOOGLE DRIVE (Fonte Primária):** Todos os arquivos jurídicos, financeiros e operacionais estão organizados no Google Drive em: **Aldeia > 02_JURIDICO** (e demais subpastas). O Google Drive é a fonte primária e mais atualizada. Use o CLI `gws` para acessar. A pasta raiz da Aldeia no Drive tem ID `1mVizl4T...` e a pasta Jurídico tem ID `1xH0J6AK...`.
+> **CAMADA 5 — GOOGLE DRIVE (Fonte Primária):** Todos os arquivos da Aldeia estão organizados no Google Drive, na pasta `Aldeia` (ID: `1mVizl4T_bOEpWeHwOvadLS0sktpX4oGa`). Estrutura de subpastas: `01_ESTRATEGICO`, `02_JURIDICO` (ID: `1xH0J6AK...`), `03_FINANCEIRO`, `04_OBRA`, `05_CLINICO`, `06_RH`, `07_MARKETING` (ID: `1NzEmwJ2_tq1O7ijqmA0qHyrb2sXjWBv-`), `08_OPERACIONAL`, `09_IMAGENS`, `10_VERSOES_ANTERIORES`, `Estrategia`, `Jornadas`. O Google Drive é a fonte primária e mais atualizada. Use o CLI `gws` para acessar. Link: https://drive.google.com/drive/folders/1mVizl4T_bOEpWeHwOvadLS0sktpX4oGa
 
 ---
 
@@ -47,6 +47,10 @@
 - ✅ Consulta Comercial (SMU) aprovada.
 - ✅ Teste do Corante (Sanepar) realizado em 07/05/2026.
 - ✅ Estratégia de Instagram (V2) e Calendário Editorial de 30 dias finalizados.
+- ✅ Reunião de alinhamento de marketing realizada (14/05/2026) — ver `MKT_24_relatorio_reuniao_14mai.md`.
+- ✅ Conta de anúncios Meta Ads criada e vinculada ao perfil da Letícia.
+- ✅ Identidade visual e Brand Book da Letícia entregues pela equipe de marketing.
+- ✅ Google Drive configurado como Camada 5 de armazenamento (pasta Aldeia).
 - ✅ Manuais de RH e Operações redigidos.
 - ✅ Plano de carreira 7 níveis definido.
 - ✅ Reunião final jurídica realizada (15/05/2026) — estratégias, proposta e cronograma consolidados.
@@ -138,6 +142,15 @@ Neuropsicólogo (7,34m²), Psico.1 (6,12m²), Psico.2 (5,83m²), Fono.1 (5,88m²
 **Stories diários:** Manhã (rosto + enquete), Tarde (bastidores + ciência), Noite (caixinhas + CTA).
 
 **Personas:** Mãe Diagnóstico Recente (acolhimento), Mãe Upgrade (diferenciais técnicos), Profissional B2B (conhecimento avançado).
+
+**Status Atual (Maio/2026):**
+- Equipe contratada: Camila (estrategista) — Investimento: R$ 3.000/mês.
+- Perfil @leticiavasco.psi: 890 seguidores, taxa de engajamento > 3%.
+- Formato prioritário: Reels (virada de carrossel para vídeo).
+- Mídia paga: R$ 300/mês (R$ 200 alcance + R$ 100 engajamento). Pagamento pré-pago.
+- Roadmap: Maio (aprendizado) → Junho (+1.000 seguidores) → Julho (gerar leads/conversas).
+- Framework de referência: Leandro Ladeira — 7 Tipos de Interação (ver `MKT_25_framework_ladeira_7interacoes.md`).
+- Gap principal: engajamento vem da própria audiência; necessário furar a bolha com mídia paga e collabs.
 
 ### 3.5. RH E CORPO CLÍNICO
 **7 Níveis de Carreira (repasse por sessão):**
@@ -251,6 +264,10 @@ Semente (Estagiário): Bolsa fixa | Broto (AT): 24-27% | Caule (Júnior): 28-31%
 | `MKT_19_plano_founder_led_growth.md` | Plano de ação Founder-Led Growth (Letícia) |
 | `MKT_20_conteudo_educativo_tea.md` | Conteúdo educativo TEA: roteiros carrosséis/reels |
 | `MKT_21_estrategia_marketing_conteudo.md` | Estratégia de marketing de conteúdo |
+| `MKT_22_editorial_calendar_skill.md` | Guia de calendário editorial (skill) |
+| `MKT_23_marketing_strategy_skill.md` | Guia de estratégia de marketing (skill) |
+| `MKT_24_relatorio_reuniao_14mai.md` | Relatório da reunião de marketing 14/05/2026 |
+| `MKT_25_framework_ladeira_7interacoes.md` | Framework Ladeira: 7 tipos de interação |
 
 ### RH (16 arquivos)
 | Arquivo | Conteúdo |
