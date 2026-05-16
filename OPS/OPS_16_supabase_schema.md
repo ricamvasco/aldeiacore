@@ -38,7 +38,9 @@ Armazena as especialidades da clínica. Já vem populada com 5 áreas iniciais.
 | `nome` | VARCHAR(100) | Nome da área (ex: "Fonoaudiologia") |
 | `created_at` | TIMESTAMP | Data de criação |
 
-**Dados iniciais:** Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Musicoterapia.
+**Dados iniciais (atualizados 16/05/2026):** Neuropsicologia, Pedagogia, Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Integração Sensorial.
+
+> ⚠️ **Nota de arquitetura (16/05/2026):** Musicoterapia foi removida — não é uma especialidade da Aldeia. As atividades complementares (Jiu-jitsu, Judô, Botânica, Circo) devem ser tratadas como categoria separada no banco (`tipo = 'atividade_complementar'`), pois contribuem para as metas das disciplinas clínicas mas não são especialidades terapêuticas formais. Requer task de arquitetura para atualizar o ENUM `areas` e criar coluna `tipo` na tabela.
 
 ### 2.2. `users` — Usuários do Sistema
 

@@ -38,7 +38,9 @@ Armazena as especialidades da clínica. Já vem populada com 5 áreas iniciais.
 | `nome` | VARCHAR(100) | Nome da área (ex: "Fonoaudiologia") |
 | `created_at` | TIMESTAMP | Data de criação |
 
-**Dados iniciais:** Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Musicoterapia.
+> ⚠️ VERSÃO DEPRECIADA — Ver OPS_16_supabase_schema.md para versão atualizada.
+
+**Dados iniciais (DEPRECIADO):** Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Musicoterapia. ~~Musicoterapia removida. Especialidades corretas: Neuropsicologia, Pedagogia, Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Integração Sensorial.~~
 
 ### 2.2. `users` — Usuários do Sistema
 

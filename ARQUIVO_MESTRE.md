@@ -1,6 +1,6 @@
 # ARQUIVO MESTRE — ALDEIA: Centro de Neurodesenvolvimento e Conexão
 
-**Última Atualização:** 14/05/2026 (atualizado em sessão de 14/05/2026)
+**Última Atualização:** 16/05/2026 (atualizado em sessão de 16/05/2026 — especialidades clínicas definitivas, Método Aldeia 360 iniciado, musicoterapia removida)
 
 > **INSTRUÇÃO PARA O MANUS:** Ao iniciar qualquer tarefa neste projeto, leia este arquivo primeiro. Ele contém o contexto completo da Aldeia. Se precisar de detalhes específicos de uma área, abra o arquivo correspondente no índice (Parte 4).
 
@@ -181,6 +181,31 @@ Semente (Estagiário): Bolsa fixa | Broto (AT): 24-27% | Caule (Júnior): 28-31%
 
 ### 3.8. ESTRATÉGIA GERAL
 **Plano Mestre 60 Dias:** Dividido em sprints semanais cobrindo todas as frentes simultaneamente. Prioridade: regularização → financeiro → equipe → marketing → inauguração.
+
+### 3.9. CLÍNICO — ESPECIALIDADES E PROTOCOLOS
+**Especialidades Clínicas Definitivas (7):** Neuropsicologia, Pedagogia, Psicologia, Fonoaudiologia, Terapia Ocupacional, Psicomotricidade, Integração Sensorial.
+
+**Atividades Complementares (vetores de desenvolvimento — não são especialidades formais):** Jiu-jitsu (→ Psicomotricidade, TO, Psico), Judô (→ Psicomotricidade, TO, Psico), Botânica (→ Pedagogia, Neuropsico), Circo (→ Psicomotricidade, IS, TO).
+
+**Nota de arquitetura:** Musicoterapia foi removida da lista de especialidades. A tabela `areas` no banco precisa ser atualizada (ver `OPS_22_task_arquitetura_especialidades.md`).
+
+**Protocolos ABA mapeados (base CERNE):** Checklist ESDM, TTT, PEAK, EFL, VBMAPP, AFLS, SSS, PFA & SBT — ver `CLIN_01_especialidades_e_protocolos.md`.
+
+**Status:** Protocolos das 7 especialidades clínicas ainda a mapear — aguardando materiais da Letícia.
+
+### 3.10. MÉTODO ALDEIA 360 (Em Construção)
+**Conceito:** Sistema integrado de governança clínica que conecta todas as especialidades em torno de metas compartilhadas por paciente. Principal diferencial competitivo da Aldeia e ativo a ser patenteado.
+
+**Problema que resolve:** No mercado atual, cada especialidade trabalha isoladamente. Não existe construção conjunta de metas, comunicação entre profissionais, ou monitoramento de impactos cruzados entre disciplinas.
+
+**Componentes do Método:**
+1. Metas 360 por paciente (construídas em conjunto por todas as especialidades envolvidas)
+2. Governança de colaboração (ritos, frequência, responsáveis — em design)
+3. Protocolos integrados por especialidade (em mapeamento)
+4. Visualizações de dados superiores ao padrão do mercado (em design)
+5. Infraestrutura na plataforma aldeia-dashboards (pendente — depende dos itens acima)
+
+**Status:** Em desenvolvimento ativo. Aguardando materiais clínicos de todas as especialidades.
 
 ---
 
