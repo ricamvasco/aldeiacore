@@ -1,6 +1,6 @@
 # ARQUIVO MESTRE — ALDEIA: Centro de Neurodesenvolvimento e Conexão
 
-**Última Atualização:** 16/05/2026 (atualizado em sessão de 16/05/2026 — especialidades clínicas definitivas, Método Aldeia 360 iniciado, musicoterapia removida)
+**Última Atualização:** 16/05/2026 (atualizado em sessão de 16/05/2026 — Sprints 7-11 concluídas, migração Supabase PostgreSQL completa, 52 testes passando)
 
 > **INSTRUÇÃO PARA O MANUS:** Ao iniciar qualquer tarefa neste projeto, leia este arquivo primeiro. Ele contém o contexto completo da Aldeia. Se precisar de detalhes específicos de uma área, abra o arquivo correspondente no índice (Parte 4).
 
@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** v60ccb55b | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
+**Checkpoint atual:** ve0d4e013 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -85,6 +85,12 @@
 - ✅ Integração WhatsApp (alertas de guia automáticos)
 - ✅ **Controle de Atendimentos para Cobrança** (Sprint 6 — Data, Hora, Paciente, Área, Tipo, Convênio, Duração, Valor, Repasse, Status, Prontuário 24h + filtros + exportação CSV/PDF)
 - ✅ **Login por Código de Acesso** (senha compartilhada, sem necessidade de conta Manus — código padrão configurável via Settings > Secrets)
+- ✅ **Quick Wins UX** (Sprint 7 — Popup PTI na Agenda, pré-preenchimento no Registro Clínico, CTA "Próximo Paciente")
+- ✅ **Documentos Pré-preenchidos** (Sprint 7.5 — 6 templates: Contrato, LGPD, Autorização, Declaração, Relatório Evolução, Anamnese + CSS print)
+- ✅ **Fluxos Conectados** (Sprint 8 — Agenda→Registro→Prontuário em 1 clique, notificações in-app, Fluxo Admissão 5 etapas, Painel "Meu Dia", alerta prontuário >24h, checklist admissão)
+- ✅ **Módulos Novos P2** (Sprint 9 — Onboarding terapeuta 6 passos, Lista de Espera CRUD, Flag "Supervisão Urgente", Flag "Risco de Evasão")
+- ✅ **Painel do Supervisor** (Sprint 10 — Dashboard consolidado de equipe, painel de pendências, cards de terapeutas com métricas, ações rápidas)
+- ✅ **Financeiro Avançado** (Sprint 11 — Cobrança Particulares, Histórico de Alterações por Guia, Presença em Lote, Relatório Mensal Automatizado)
 
 **Decisões de arquitetura (14/05/2026):**
 - **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
@@ -92,12 +98,21 @@
 - **UX sequencial:** Diagnóstico identificou 8 de 10 fluxos quebrados (80%). Plataforma trata telas como módulos independentes, sem CTAs de "próximo passo". Quick wins priorizados: popup de objetivos na agenda, pré-preenchimento no registro clínico, CTA "próximo paciente".
 - **Multi-tenant (futuro):** Análise de viabilidade SaaS concluída. Custo infra R$ 280/mês para até 20 clínicas. Requer: clinicaId em 28 tabelas, auth próprio, Stripe, landing page, painel super admin. Estimativa: 8-9 semanas.
 
+**Sprints concluídas (16/05/2026):**
+- ✅ Sprint 7: Quick Wins UX (P0) — Popup PTI, pré-preenchimento, CTA próximo paciente
+- ✅ Sprint 7.5: Documentos Pré-preenchidos — 6 templates com auto-fill
+- ✅ Sprint 8: Fluxos Conectados (P1) — Admissão, Meu Dia, alertas, checklist
+- ✅ Sprint 9: Módulos Novos (P2 alta) — Onboarding, Lista de Espera, flags urgência/evasão
+- ✅ Sprint 10: Painel de Supervisão (P2) — Dashboard supervisor, pendências, equipe
+- ✅ Sprint 11: Financeiro Avançado (P2+P3) — Particulares, histórico guias, presença lote, relatório mensal
+- ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
+
 **Próximas sprints pendentes:**
+- Sprint 13: Módulos Complementares (Ocorrências, Atas de Reunião, PDI, Horas por sessão)
+- Conectar banco real: Substituir dados demo por CRUD Supabase em todas as páginas
 - Sprint 4: Portal Família (acesso externo para pais/responsáveis)
 - Sprint 5: Agenda Inteligente (otimização de horários, conflitos)
-- Sprint 7: Inteligência Artificial (predição de evasão, sugestões)
-- Quick Wins UX: CTAs de próximo passo em fluxos críticos (onboarding, sessão, supervisão, faturamento)
-- ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
+- IA: Inteligência Artificial (predição de evasão, sugestões)
 - Migração Supabase (Auth): Substituir Manus OAuth por Supabase Auth (futuro)
 - Migração Supabase (Deploy): Deploy independente do Manus (futuro)
 
