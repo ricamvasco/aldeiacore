@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** v1ced3912 | **Tecnologia:** React 19 + tRPC + MySQL + Tailwind 4
+**Checkpoint atual:** v60ccb55b | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -88,7 +88,7 @@
 
 **Decisões de arquitetura (14/05/2026):**
 - **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
-- **Migração planejada:** Após validação da Nyccole, migrar banco TiDB → Supabase PostgreSQL (RLS, backup controlado, portabilidade, compliance LGPD). Estimativa: 3-4 sessões.
+- **Migração banco concluída (16/05/2026):** TiDB/MySQL → Supabase PostgreSQL. Schema convertido (31 tabelas), driver atualizado (mysql2 → postgres), testes passando (52/52). Projeto Supabase: `tstrvgsjfwgvivhnpead`. Pendente: migração de dados reais e remoção da dependência mysql2.
 - **UX sequencial:** Diagnóstico identificou 8 de 10 fluxos quebrados (80%). Plataforma trata telas como módulos independentes, sem CTAs de "próximo passo". Quick wins priorizados: popup de objetivos na agenda, pré-preenchimento no registro clínico, CTA "próximo paciente".
 - **Multi-tenant (futuro):** Análise de viabilidade SaaS concluída. Custo infra R$ 280/mês para até 20 clínicas. Requer: clinicaId em 28 tabelas, auth próprio, Stripe, landing page, painel super admin. Estimativa: 8-9 semanas.
 
@@ -97,7 +97,9 @@
 - Sprint 5: Agenda Inteligente (otimização de horários, conflitos)
 - Sprint 7: Inteligência Artificial (predição de evasão, sugestões)
 - Quick Wins UX: CTAs de próximo passo em fluxos críticos (onboarding, sessão, supervisão, faturamento)
-- Migração Supabase: Banco + Auth + Deploy independente
+- ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
+- Migração Supabase (Auth): Substituir Manus OAuth por Supabase Auth (futuro)
+- Migração Supabase (Deploy): Deploy independente do Manus (futuro)
 
 ---
 
