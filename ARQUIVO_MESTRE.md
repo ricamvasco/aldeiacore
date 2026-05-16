@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** ve0d4e013 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
+**Checkpoint atual:** v69ae8ad8 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -91,6 +91,7 @@
 - ✅ **Módulos Novos P2** (Sprint 9 — Onboarding terapeuta 6 passos, Lista de Espera CRUD, Flag "Supervisão Urgente", Flag "Risco de Evasão")
 - ✅ **Painel do Supervisor** (Sprint 10 — Dashboard consolidado de equipe, painel de pendências, cards de terapeutas com métricas, ações rápidas)
 - ✅ **Financeiro Avançado** (Sprint 11 — Cobrança Particulares, Histórico de Alterações por Guia, Presença em Lote, Relatório Mensal Automatizado)
+- ✅ **Módulos Complementares** (Sprint 13 — Ocorrências/Incidentes, Atas de Reunião, PDI vinculado ao plano de carreira, Horas Automáticas por Sessão)
 
 **Decisões de arquitetura (14/05/2026):**
 - **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
@@ -105,10 +106,11 @@
 - ✅ Sprint 9: Módulos Novos (P2 alta) — Onboarding, Lista de Espera, flags urgência/evasão
 - ✅ Sprint 10: Painel de Supervisão (P2) — Dashboard supervisor, pendências, equipe
 - ✅ Sprint 11: Financeiro Avançado (P2+P3) — Particulares, histórico guias, presença lote, relatório mensal
+- ✅ Sprint 13: Módulos Complementares (P2+P3) — Ocorrências, Atas, PDI, Horas Automáticas
 - ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
 
 **Próximas sprints pendentes:**
-- Sprint 13: Módulos Complementares (Ocorrências, Atas de Reunião, PDI, Horas por sessão)
+- Portal Família: Acesso externo para pais/responsáveis (evolução, agenda, documentos, comunicação)
 - Conectar banco real: Substituir dados demo por CRUD Supabase em todas as páginas
 - Sprint 4: Portal Família (acesso externo para pais/responsáveis)
 - Sprint 5: Agenda Inteligente (otimização de horários, conflitos)
