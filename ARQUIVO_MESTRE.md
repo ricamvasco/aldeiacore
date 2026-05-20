@@ -390,6 +390,7 @@ Semente (Estagiário): Bolsa fixa | Broto (AT): 24-27% | Caule (Júnior): 28-31%
 | `OPS_19_culture_manual.md` | Manual de cultura organizacional |
 | `OPS_20_kpis_clinica_v2.md` | KPIs clínica (versão 2) |
 | `OPS_21_kpis_profissionais_v2.md` | KPIs profissionais (versão 2) |
+| `OPER_assinatura_email_template.md` | Template de assinatura de e-mail (onboarding) + HTML pronto para Gmail |
 
 ### BRANDING (9 arquivos)
 | Arquivo | Conteúdo |
