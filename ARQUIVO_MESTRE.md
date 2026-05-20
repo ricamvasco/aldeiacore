@@ -16,9 +16,9 @@
 - **Nome Oficial:** Aldeia — Centro de Neurodesenvolvimento e Conexão (O nome "Clínica Aldeia" foi descontinuado).
 - **Slogan:** "Porque nenhuma criança deveria crescer sozinha — é preciso uma aldeia inteira para florescer."
 - **Frase de Apoio:** "Conectar é desenvolver. Desenvolver é florescer."
-- **Logo:** Árvore estilizada com raízes visíveis (verde + navy). Em redes sociais, usar apenas o símbolo da árvore, sem o nome.
-- **Paleta de Cores:** Azul Navy (#0F2A44), Verde Lima (#A6CE39), Verde Escuro (#2E7D32), Off-White (#F7F9FB), Bege Quente (#EDE7DF), Cinza Slate (#5F6B73).
-- **Arquivos de Logo:** Ver pasta `IMAGENS/` — arquivos `logo_aldeia_hd.png`, `logo_aldeia_completo.png`, `logo_final_quadrado.png`, `logo_final_horizontal.png`, `icone_final.png`, `aldeia_logo_tree.png`, `aldeia_logo_simbolo.png`.
+- **Logo Oficial (DECISÃO 20/05/2026):** `logo_aldeia_pt_hd.png` — Árvore estilizada com raízes visíveis (verde lima + navy) + texto "ALDEIA — Neurodiversidade & Desenvolvimento Infantil". **ESTA é a logo que deve ser usada em TODOS os materiais** (assinaturas de e-mail, apresentações, documentos, site, papelaria, etc.). Em redes sociais, usar apenas o símbolo da árvore sem o nome (`aldeia_logo_tree.png`).
+- **Paleta de Cores:** Azul Navy (#0F2A44 / #1E3A5F), Verde Lima (#A6CE39 / #9AB840), Verde Escuro (#2E7D32), Off-White (#F7F9FB), Bege Quente (#EDE7DF), Cinza Slate (#5F6B73).
+- **Arquivos de Logo:** Ver pasta `IMAGENS/` — `logo_aldeia_pt_hd.png` (OFICIAL), `logo_aldeia_hd.png` (versão EN), `logo_aldeia_completo.png` (árvore sem texto), `logo_final_quadrado.png`, `logo_final_horizontal.png`, `aldeia_logo_tree.png` (símbolo para redes sociais), `aldeia_logo_simbolo.png`.
 
 ### 1.2. Dados Fixos
 - **CNPJ:** 66.498.867/0001-27
