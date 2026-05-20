@@ -1,6 +1,6 @@
 # ARQUIVO MESTRE — ALDEIA: Centro de Neurodesenvolvimento e Conexão
 
-**Última Atualização:** 16/05/2026 (atualizado em sessão de 16/05/2026 — Sprints 7-11 concluídas, migração Supabase PostgreSQL completa, 52 testes passando)
+**Última Atualização:** 20/05/2026 (atualizado em sessão de 20/05/2026 — Sprint 15 Bloco A concluído, fundação clínica completa, 64 testes passando)
 
 > **INSTRUÇÃO PARA O MANUS:** Ao iniciar qualquer tarefa neste projeto, leia este arquivo primeiro. Ele contém o contexto completo da Aldeia. Se precisar de detalhes específicos de uma área, abra o arquivo correspondente no índice (Parte 4).
 
@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** v74336c94 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
+**Checkpoint atual:** v041ce1bc | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -97,6 +97,12 @@
 - ✅ **Sprint 14: Banco Real Confirmado** — Cadastro de Pacientes e Colaboradores já conectados ao Supabase, seed de 10 pacientes + 8 terapeutas
 - ✅ **Sprint 14b: Renomear Registro Clínico → Apontamento** — Nomenclatura corrigida em toda a plataforma
 - ✅ **P0: Customização de Protocolos** — Scoring flexível por protocolo (VB-MAPP milestone, Denver pass/fail, ABLLS-R/AFLS escala independência)
+- ✅ **Sprint 15 — Bloco A: Fundação Clínica (20/05/2026):**
+  - A1: Apontamentos (RegistroSessoes) conectado ao banco real Supabase (removido DEMO_DATA, CRUD via tRPC, 50 sessões seed)
+  - A2: PTI (PlanoTerapeutico) conectado ao banco real Supabase (removido DEMO_PLANOS, CRUD via tRPC, 8 planos seed)
+  - A3: Protocolos de Avaliação conectado ao banco real Supabase (removido dados demo, CRUD via tRPC, 12 protocolos seed)
+  - A4: Datas extras no cadastro de pacientes (1º contato, 1ª avaliação, início atendimento) + Médico Encaminhador (nome, CRM, especialidade)
+  - A5: Diferenciação PTI vs PEI implementada (PTI = por especialidade/revisão semestral, PEI = global multidisciplinar/revisão anual)
 
 **Documentos Clínicos de Referência (20/05/2026):**
 - Google Drive: [Aldeia/05_CLINICO/Protocolos/](https://drive.google.com/open?id=12NOqYw36oEoom91M4KOWGAQf0P0PM9kZ)
@@ -107,13 +113,15 @@
 - Exemplos reais: DaviNovaisfev26.pdf, ProgramaSSS-GaelSandes.pdf
 - Análise completa: `analise_protocolos_clinicos.md` na mesma pasta
 
-**Decisões de arquitetura (14/05/2026):**
+**Decisões de arquitetura (20/05/2026):**
 - **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
-- **Migração banco concluída (16/05/2026):** TiDB/MySQL → Supabase PostgreSQL. Schema convertido (31 tabelas), driver atualizado (mysql2 → postgres), testes passando (52/52). Projeto Supabase: `tstrvgsjfwgvivhnpead`. Pendente: migração de dados reais e remoção da dependência mysql2.
+- **Migração banco concluída (16/05/2026):** TiDB/MySQL → Supabase PostgreSQL. Schema convertido (31 tabelas), driver atualizado (mysql2 → postgres), testes passando (64/64). Projeto Supabase: `tstrvgsjfwgvivhnpead`. Pendente: migração de dados reais e remoção da dependência mysql2.
 - **UX sequencial:** Diagnóstico identificou 8 de 10 fluxos quebrados (80%). Plataforma trata telas como módulos independentes, sem CTAs de "próximo passo". Quick wins priorizados: popup de objetivos na agenda, pré-preenchimento no registro clínico, CTA "próximo paciente".
 - **Multi-tenant (futuro):** Análise de viabilidade SaaS concluída. Custo infra R$ 280/mês para até 20 clínicas. Requer: clinicaId em 28 tabelas, auth próprio, Stripe, landing page, painel super admin. Estimativa: 8-9 semanas.
+- **PTI vs PEI (20/05/2026):** Enum `tipo_plano` criado no banco (`pti`, `pei`). PTI = plano por especialidade com revisão semestral (180 dias). PEI = plano global multidisciplinar com revisão anual (365 dias). Área do PEI é automaticamente "Multidisciplinar".
+- **Datas de fluxo do paciente (20/05/2026):** Campos `dataPrimeiroContato`, `dataPrimeiraAvaliacao`, `dataInicioAtendimento` adicionados à tabela `pacientes`. Permitem rastrear o funil de conversão (contato → avaliação → início). Médico encaminhador (nome, CRM, especialidade) também adicionado para banco de indicações.
 
-**Sprints concluídas (16/05/2026):**
+**Sprints concluídas (20/05/2026):**
 - ✅ Sprint 7: Quick Wins UX (P0) — Popup PTI, pré-preenchimento, CTA próximo paciente
 - ✅ Sprint 7.5: Documentos Pré-preenchidos — 6 templates com auto-fill
 - ✅ Sprint 8: Fluxos Conectados (P1) — Admissão, Meu Dia, alertas, checklist
@@ -126,12 +134,13 @@
 - ✅ P0: Customização de Protocolos de Avaliação (scoring flexível por protocolo)
 - ✅ Login Individual com Convites (email+senha, RBAC por cargo)
 - ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
+- ✅ **Sprint 15 — Bloco A: Fundação Clínica (20/05/2026)** — Apontamentos, PTI, Protocolos conectados ao banco real; datas de fluxo + médico encaminhador; PTI vs PEI diferenciados
 
-**Próximas sprints pendentes:**
-- P1: Datas extras no cadastro (1º contato, 1ª avaliação, início atendimento) + Banco de Médicos
+**Próximas sprints pendentes (atualizado 20/05/2026):**
+- ~~P1: Datas extras no cadastro~~ → CONCLUÍDO (Sprint 15 A4)
+- ~~P1: Diferenciar PTI vs PEI~~ → CONCLUÍDO (Sprint 15 A5)
 - P1: Separar Relatórios Evolutivos dos Apontamentos (aba própria no prontuário)
 - P1: Módulo de Documentos com tags obrigatórias (RG, Laudo, Encaminhamento)
-- P1: Diferenciar PTI vs PEI (PTI = trimestral/área, PEI = anual/global)
 - P2: Adicionar protocolo SSS (Social Skills Solution)
 - P2: Vincular resultados de protocolo → Metas PTI/PEI automaticamente
 - P2: AFLS separado em 6 subprotocolos (Básicas, Social, Independente, Domésticas, Vocacionais, Escolares)
