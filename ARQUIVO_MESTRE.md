@@ -57,7 +57,7 @@
 - ✅ Modelo de honorários de reembolso definido com escritório Höschele e Silva.
 
 ### 2.3. Plataforma Digital (aldeia-dashboards) — Status Maio/2026
-**Checkpoint atual:** v69ae8ad8 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
+**Checkpoint atual:** v74336c94 | **Tecnologia:** React 19 + tRPC + PostgreSQL (Supabase) + Tailwind 4
 
 **Módulos implementados e funcionando:**
 - ✅ Dashboard Executivo (KPIs gerais, gráficos de ocupação)
@@ -72,7 +72,7 @@
 - ✅ Relatórios PDF (geração automática)
 - ✅ Notificações (alertas de guia, sistema)
 - ✅ Painel Admin (configurações, usuários)
-- ✅ Protocolos de Avaliação (VB-MAPP, Denver, ABLS, AFLS — scoring automático)
+- ✅ Protocolos de Avaliação (VB-MAPP 0/0.5/1, Denver +/+/-/-, ABLLS-R 0-4, AFLS 0-4 — scoring customizado por protocolo)
 - ✅ Plano Terapêutico Individual - PTI (objetivos SMART, revisão trimestral)
 - ✅ Relatório de Evolução Automatizado (para convênios) + Exportação CSV com filtro por convênio/período
 - ✅ Supervisão Clínica (registro, feedback, plano de ação)
@@ -92,6 +92,20 @@
 - ✅ **Painel do Supervisor** (Sprint 10 — Dashboard consolidado de equipe, painel de pendências, cards de terapeutas com métricas, ações rápidas)
 - ✅ **Financeiro Avançado** (Sprint 11 — Cobrança Particulares, Histórico de Alterações por Guia, Presença em Lote, Relatório Mensal Automatizado)
 - ✅ **Módulos Complementares** (Sprint 13 — Ocorrências/Incidentes, Atas de Reunião, PDI vinculado ao plano de carreira, Horas Automáticas por Sessão)
+- ✅ **Login Individual com Convites** — Sistema de convites por email, criação de senha, login email+senha, painel de gerenciamento de convites
+- ✅ **Permissões por Role (RBAC)** — Sidebar filtrado por cargo (socio/lider/terapeuta), cargoAldeia no auth.me
+- ✅ **Sprint 14: Banco Real Confirmado** — Cadastro de Pacientes e Colaboradores já conectados ao Supabase, seed de 10 pacientes + 8 terapeutas
+- ✅ **Sprint 14b: Renomear Registro Clínico → Apontamento** — Nomenclatura corrigida em toda a plataforma
+- ✅ **P0: Customização de Protocolos** — Scoring flexível por protocolo (VB-MAPP milestone, Denver pass/fail, ABLLS-R/AFLS escala independência)
+
+**Documentos Clínicos de Referência (20/05/2026):**
+- Google Drive: [Aldeia/05_CLINICO/Protocolos/](https://drive.google.com/open?id=12NOqYw36oEoom91M4KOWGAQf0P0PM9kZ)
+- VB-MAPP: Manual completo (200 páginas) — 5 componentes, 170 marcos, 3 níveis
+- AFLS: 6 volumes (Básicas, Social, Independente, Domésticas, Vocacionais, Escolares) — escala 0-4
+- Denver: Checklist por faixa etária — scoring +/+/-/-
+- Social Skills Solution (SSS): Manual + programa individualizado de paciente
+- Exemplos reais: DaviNovaisfev26.pdf, ProgramaSSS-GaelSandes.pdf
+- Análise completa: `analise_protocolos_clinicos.md` na mesma pasta
 
 **Decisões de arquitetura (14/05/2026):**
 - **Auth temporário:** Manus OAuth + código de acesso (substituiu Supabase Auth que estava causando bug de modo demo). Supabase Auth foi removido do frontend.
@@ -107,16 +121,26 @@
 - ✅ Sprint 10: Painel de Supervisão (P2) — Dashboard supervisor, pendências, equipe
 - ✅ Sprint 11: Financeiro Avançado (P2+P3) — Particulares, histórico guias, presença lote, relatório mensal
 - ✅ Sprint 13: Módulos Complementares (P2+P3) — Ocorrências, Atas, PDI, Horas Automáticas
+- ✅ Sprint 14: Banco Real Confirmado + Seed Data (10 pacientes + 8 terapeutas)
+- ✅ Sprint 14b: Renomear Registro Clínico → Apontamento
+- ✅ P0: Customização de Protocolos de Avaliação (scoring flexível por protocolo)
+- ✅ Login Individual com Convites (email+senha, RBAC por cargo)
 - ✅ Migração Supabase (Banco): Schema PostgreSQL criado com 31 tabelas, conexão via transaction pooler
 
 **Próximas sprints pendentes:**
+- P1: Datas extras no cadastro (1º contato, 1ª avaliação, início atendimento) + Banco de Médicos
+- P1: Separar Relatórios Evolutivos dos Apontamentos (aba própria no prontuário)
+- P1: Módulo de Documentos com tags obrigatórias (RG, Laudo, Encaminhamento)
+- P1: Diferenciar PTI vs PEI (PTI = trimestral/área, PEI = anual/global)
+- P2: Adicionar protocolo SSS (Social Skills Solution)
+- P2: Vincular resultados de protocolo → Metas PTI/PEI automaticamente
+- P2: AFLS separado em 6 subprotocolos (Básicas, Social, Independente, Domésticas, Vocacionais, Escolares)
+- P2: VB-MAPP componentes Barreiras (24 itens) e Transição (18 áreas)
 - Portal Família: Acesso externo para pais/responsáveis (evolução, agenda, documentos, comunicação)
-- Conectar banco real: Substituir dados demo por CRUD Supabase em todas as páginas
-- Sprint 4: Portal Família (acesso externo para pais/responsáveis)
-- Sprint 5: Agenda Inteligente (otimização de horários, conflitos)
+- Agenda Inteligente: Otimização de horários, conflitos, encaixes
 - IA: Inteligência Artificial (predição de evasão, sugestões)
-- Migração Supabase (Auth): Substituir Manus OAuth por Supabase Auth (futuro)
-- Migração Supabase (Deploy): Deploy independente do Manus (futuro)
+- Migração Auth: Substituir Manus OAuth por auth próprio (futuro)
+- Deploy independente: Sair do Manus hosting (futuro)
 
 ---
 
